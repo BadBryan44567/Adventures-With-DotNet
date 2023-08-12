@@ -2,30 +2,29 @@
 
 namespace Calculator;
 
-public class Program
+public abstract class Program
 {
-    private static void Main(string[] args)
+    private static void Main()
     {
         // Vars
         var a = 0;
         var b = 0;
-        var ch = "";
-        
-            Operations operations = new Operations();
+
+        Operations operations = new Operations();
             Console.WriteLine("Welcome to Calculator! ");
             Console.WriteLine("Here are available options:\n" +
                               "1. Add (+)\n" +
                               "2. Subtract (-)\n" +
                               "3. Multiply (*)\n" +
                               "4. Divide (/)\n");
-            ch = Console.ReadLine();
+            var ch = Console.ReadLine();
 
             string[] validOperations = { "+", "-", "*", "/" };
 
             if (!validOperations.Contains(ch))
             {
                 Console.WriteLine("Invalid Operation. ");
-                System.Diagnostics.Process.Start(System.AppDomain.CurrentDomain.FriendlyName);
+                System.Diagnostics.Process.Start(AppDomain.CurrentDomain.FriendlyName);
                 return;
             }
             Console.WriteLine("Enter First Number ( Operand ): ");
