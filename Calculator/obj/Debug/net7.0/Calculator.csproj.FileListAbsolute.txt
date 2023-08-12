@@ -1,0 +1,15 @@
+D:\Projects\Adventures-With-DotNet\Calculator\bin\Debug\net7.0\Calculator.exe
+D:\Projects\Adventures-With-DotNet\Calculator\bin\Debug\net7.0\Calculator.deps.json
+D:\Projects\Adventures-With-DotNet\Calculator\bin\Debug\net7.0\Calculator.runtimeconfig.json
+D:\Projects\Adventures-With-DotNet\Calculator\bin\Debug\net7.0\Calculator.dll
+D:\Projects\Adventures-With-DotNet\Calculator\bin\Debug\net7.0\Calculator.pdb
+D:\Projects\Adventures-With-DotNet\Calculator\obj\Debug\net7.0\Calculator.csproj.AssemblyReference.cache
+D:\Projects\Adventures-With-DotNet\Calculator\obj\Debug\net7.0\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Adventures-With-DotNet\Calculator\obj\Debug\net7.0\Calculator.AssemblyInfoInputs.cache
+D:\Projects\Adventures-With-DotNet\Calculator\obj\Debug\net7.0\Calculator.AssemblyInfo.cs
+D:\Projects\Adventures-With-DotNet\Calculator\obj\Debug\net7.0\Calculator.csproj.CoreCompileInputs.cache
+D:\Projects\Adventures-With-DotNet\Calculator\obj\Debug\net7.0\Calculator.dll
+D:\Projects\Adventures-With-DotNet\Calculator\obj\Debug\net7.0\refint\Calculator.dll
+D:\Projects\Adventures-With-DotNet\Calculator\obj\Debug\net7.0\Calculator.pdb
+D:\Projects\Adventures-With-DotNet\Calculator\obj\Debug\net7.0\Calculator.genruntimeconfig.cache
+D:\Projects\Adventures-With-DotNet\Calculator\obj\Debug\net7.0\ref\Calculator.dll
