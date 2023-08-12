@@ -2,37 +2,54 @@
 
 namespace Calculator;
 
-class Program
+public class Program
 {
     private static void Main(string[] args)
     {
+        // Vars
+        var a = 0;
         var b = 0;
-        Operations operations = new Operations();
+        var ch = "";
         
-        Console.WriteLine("Welcome to Calculator! ");
-        Console.WriteLine("Here are available options:\n" +
-                          "1. Add (+)\n" +
-                          "2. Subtract (-)\n" +
-                          "3. Multiply (*)\n" +
-                          "4. Divide (/)\n");
-        var ch = Console.ReadLine();
-        
-       Console.WriteLine("Enter First Number ( Operand ): ");
-       var numInput1 = Console.ReadLine();
-       var a = int.Parse(numInput1!);
-       
-       Console.WriteLine("Enter Second Number ( Operand ): ");
-       var numInput2 = Console.ReadLine();
+            Operations operations = new Operations();
+            Console.WriteLine("Welcome to Calculator! ");
+            Console.WriteLine("Here are available options:\n" +
+                              "1. Add (+)\n" +
+                              "2. Subtract (-)\n" +
+                              "3. Multiply (*)\n" +
+                              "4. Divide (/)\n");
+            ch = Console.ReadLine();
 
-       try
-       {
-           if (numInput2 != null) b = int.Parse(numInput2);
-       }
-       catch (FormatException e)
-       {
-           Console.WriteLine("Error occured: " + e.Message);
-       }
-       
+            string[] validOperations = { "+", "-", "*", "/" };
+
+            if (!validOperations.Contains(ch))
+            {
+                Console.WriteLine("Invalid Operation. ");
+                System.Diagnostics.Process.Start(System.AppDomain.CurrentDomain.FriendlyName);
+                return;
+            }
+            Console.WriteLine("Enter First Number ( Operand ): ");
+            var numInput1 = Console.ReadLine();
+            try
+            {
+                if (numInput1 != null) a = int.Parse(numInput1);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Error occured: " + e.Message);
+            }
+
+            Console.WriteLine("Enter Second Number ( Operand ): ");
+            var numInput2 = Console.ReadLine();
+
+            try
+            {
+                if (numInput2 != null) b = int.Parse(numInput2);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Error occured: " + e.Message);
+            }
         switch (ch)
         {
             case "+": 
@@ -54,9 +71,6 @@ class Program
                 {
                     Console.WriteLine("Error: " + e.Message);
                 }
-                break;
-            default: 
-                Console.WriteLine("Runtime Exception x000001: Invalid Operation");
                 break;
         }
     }
