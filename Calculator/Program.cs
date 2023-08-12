@@ -6,6 +6,7 @@ class Program
 {
     private static void Main(string[] args)
     {
+        var b = 0;
         Operations operations = new Operations();
         
         Console.WriteLine("Welcome to Calculator! ");
@@ -22,7 +23,15 @@ class Program
        
        Console.WriteLine("Enter Second Number ( Operand ): ");
        var numInput2 = Console.ReadLine();
-       var b = int.Parse(numInput2!);
+
+       try
+       {
+           if (numInput2 != null) b = int.Parse(numInput2);
+       }
+       catch (FormatException e)
+       {
+           Console.WriteLine("Error occured: " + e.Message);
+       }
        
         switch (ch)
         {
@@ -36,14 +45,14 @@ class Program
                 Console.WriteLine("Result is: " + operations.Multiply(a, b));
                 break;
             case "/":
-                if (b != 0)
+                try
                 {
-                    Console.WriteLine("Result is: " + operations.Division(a, b));
+                    var result = operations.Division(a, b);
+                    Console.WriteLine("Result is: " + result);
                 }
-
-                else
+                catch (DivideByZeroException e)
                 {
-                    Console.WriteLine("Runtime Exception x000011: Cannot Divide by 0");
+                    Console.WriteLine("Error: " + e.Message);
                 }
                 break;
             default: 
